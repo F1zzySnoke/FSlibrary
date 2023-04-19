@@ -13,6 +13,14 @@ body{
 	height: 10vh;
 	background: rgba(62, 62, 62, 0.3);
 }
+.header_lamguage{
+	text-decoration: none;
+	color: white;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+}.header_lamguage:target .overlay:target{
+	
+}
 .header_container{
 	min-width: 1070px;
 	height: 100%;
@@ -83,7 +91,7 @@ body{
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 }
 .content_container_text{
 	height: 50%;
@@ -155,17 +163,17 @@ body{
   .popup {
 	margin: 70px auto;
 	padding: 20px;
-	background: #fff;
+	background: #3e3e3e;
 	border-radius: 5px;
 	width: 50%;
 	height: 80%;
 	position: relative;
-	transition: all 3s ease-in-out;
+	transition: all 1s ease-in-out;
   }
 
   .popup h2 {
 	margin-top: 0;
-	color: #333;
+	color: white;
 	font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
@@ -176,14 +184,79 @@ body{
 	font-size: 30px;
 	font-weight: bold;
 	text-decoration: none;
-	color: #333;
+	color: white;
   }
   .popup .close:hover {
 	color: rgb(226, 19, 19);
   }
   .popup .popup_content {
 	max-height: 30%;
-	overflow: auto;
+	display:flex;
+	justify-content: space-evenly;
+
+  }
+  .overlay1 {
+	user-select: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+  }
+  .overlay1:target {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .popup1 {
+	margin: 70px auto;
+	padding: 20px;
+	background: #3e3e3e;
+	border-radius: 5px;
+	width: 10%;
+	height: 20%;
+	position: relative;
+	transition: all 1s ease-in-out;
+  }
+
+  .popup1 h2 {
+	margin-top: 0;
+	color: white;
+	font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup1 .close1 {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+  }
+  .popup1 .close1:hover {
+	color: rgb(226, 19, 19);
+  }
+  .popup1 .popup_content1 {
+	max-height: 30%;
+	height: 100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .popup1 .popup_content1 a{
+	text-decoration: none;
+	color:white;
+  }
+  .popup1 .popup_content1 a:hover{
+	text-decoration: none;
+	color:#ee6161;
   }
   .main{
 	user-select: none;
